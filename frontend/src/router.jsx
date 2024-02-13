@@ -1,9 +1,13 @@
-import {createBrowserRouter} from "react-router-dom";
+import {Navigate, createBrowserRouter} from "react-router-dom";
 import Home from "./Home";
 import Irrigation from "./Irrigation";
 import NavBar from './NavBar';
 
 const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Navigate to={'/home'} />
+    },
     {
         path: '/',
         element: <NavBar />,
