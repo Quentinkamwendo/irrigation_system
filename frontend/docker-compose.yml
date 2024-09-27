@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    build: .
+    ports:
+      - "3000:80"
+    networks:
+      - react-networks
+    volumes:
+      - .:/usr/src/app
+    restart: unless-stopped
+networks:
+  react-networks:
+    driver: bridge
