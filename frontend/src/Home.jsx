@@ -22,7 +22,7 @@ const Home = () => {
     formState: { errors },
   } = useForm();
   const toast = useToast();
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { mutate, isPending } = useMutation({
     mutationFn: (data) => axios.post("/api/river_flow", data),
@@ -35,7 +35,7 @@ const Home = () => {
         duration: 7000,
         isClosable: true,
       });
-        navigate("/irrigation");
+      navigate("/irrigation");
     },
     onError: (error) => {
       if (error) {
